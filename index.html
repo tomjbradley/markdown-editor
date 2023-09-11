@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,22 +13,23 @@
     />
     <title>MultiMarkdown Editor</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="renderer.js" defer></script>
+    <script defer src="renderer.js"></script>
   </head>
   <body>
-    <header class="app-header">
-      <div class="history-buttons">
-        <button disabled>&lt;</button>
-        <button disabled>&gt;</button>
+    <header id="app-header">
+      <div>
+        <button class="button" disabled>&lt;</button>
+        <button class="button" disabled>&gt;</button>
       </div>
       <input type="search" placeholder="Type to search." />
     </header>
-    <div class="app-sidebar">
-      <button id="storage-directory-button">Choose Storage Directory</button>
+    <div id="app-sidebar">
+      <button id="storage-directory-button" class="button">
+        Choose Storage Directory
+      </button>
     </div>
-    <main class="main">
+    <main>
       <span class="center-self">Nothing Selected</span>
     </main>
-    <footer class="app-footer">(Nothing selected)</footer>
   </body>
 </html>
