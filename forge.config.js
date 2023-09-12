@@ -27,14 +27,24 @@ module.exports = {
     {
       name: "@electron-forge/maker-zip",
       platforms: ["darwin"],
+      config: {
+        authors: "Tom Bradley",
+        description: "A simple markdown editor.",
+      },
     },
     {
       name: "@electron-forge/maker-deb",
-      config: {},
+      config: {
+        authors: "Tom Bradley",
+        description: "A simple markdown editor.",
+      },
     },
     {
       name: "@electron-forge/maker-rpm",
-      config: {},
+      config: {
+        authors: "Tom Bradley",
+        description: "A simple markdown editor.",
+      },
     },
   ],
   plugins: [
