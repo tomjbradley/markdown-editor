@@ -1,8 +1,8 @@
 {
   "name": "multimarkdown-editor",
   "productName": "MultiMarkdown Editor",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "A simple markdown editor.",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -12,7 +12,7 @@
     "publish": "electron-forge publish"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tom Bradley",
   "license": "ISC",
   "devDependencies": {
     "@electron-forge/cli": "^6.4.1",
@@ -25,7 +25,6 @@
     "electron": "^26.1.0"
   },
   "dependencies": {
-    "dotenv": "^16.3.1",
     "electron-squirrel-startup": "^1.0.0"
   }
 }
