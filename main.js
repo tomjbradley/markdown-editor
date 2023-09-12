@@ -12,7 +12,6 @@ const createWindow = () => {
   });
 
   window.loadFile("index.html");
-  window.webContents.openDevTools();
 };
 
 const showDialog = async () => {
