@@ -8,7 +8,8 @@
     "start": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
   },
   "keywords": [],
   "author": "",
@@ -20,9 +21,11 @@
     "@electron-forge/maker-squirrel": "^6.4.1",
     "@electron-forge/maker-zip": "^6.4.1",
     "@electron-forge/plugin-auto-unpack-natives": "^6.4.1",
+    "@electron-forge/publisher-github": "^6.4.2",
     "electron": "^26.1.0"
   },
   "dependencies": {
+    "dotenv": "^16.3.1",
     "electron-squirrel-startup": "^1.0.0"
   }
 }

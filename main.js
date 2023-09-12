@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const { app, BrowserWindow, ipcMain, dialog, Menu } = require("electron");
 const path = require("node:path");
 const fs = require("node:fs/promises");
