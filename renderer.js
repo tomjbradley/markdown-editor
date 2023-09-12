@@ -1,6 +1,7 @@
 // Element Declarations
 const sidebar = document.getElementById("app-sidebar");
 const main = document.querySelector("main");
+const searchBar = document.getElementById("search-bar");
 const storageDirectoryButton = document.getElementById(
   "storage-directory-button"
 );
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 storageDirectoryButton.onclick = handleStorageDirectoryButtonClick;
 sidebar.oncontextmenu = handleOpenContextMenu;
+searchBar.oninput = handleSearch;
 
 electron.onCloseContextMenu(handleCloseContextMenu);
 electron.onCreateNewFile(handleCreateNewFile);
@@ -141,6 +143,21 @@ function handleRenameFile(_, filename) {
 function handleEditorInput(event) {
   const editor = event.target;
   electron.overwriteFile(editor.value, currentFilename, storageDirectoryPath);
+}
+
+function handleSearch(event) {
+  const searchQuery = event.target.value;
+
+  const fileListItems = document.querySelectorAll(".file-list__item");
+  fileListItems.forEach((fileListItem) => {
+    const { filename } = fileListItem.dataset;
+
+    if (!filename.toLowerCase().includes(searchQuery.toLowerCase())) {
+      fileListItem.hidden = true;
+    } else {
+      fileListItem.hidden = false;
+    }
+  });
 }
 
 // Loaders
